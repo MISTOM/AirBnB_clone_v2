@@ -59,6 +59,10 @@ class FileStorage:
         except FileNotFoundError:
             pass
 
+    def close(self):
+        """call reload() method for deserializing the JSON file to objects"""
+        self.reload()
+        
         classes = {
                     'BaseModel': BaseModel, 'User': User, 'Place': Place,
                     'State': State, 'City': City, 'Amenity': Amenity,
