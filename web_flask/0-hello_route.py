@@ -1,14 +1,15 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 """
-Starts a Flas web application
+starts a Flask web application
 """
 
 from flask import Flask
 app = Flask(__name__)
 
+
 @app.route('/', strict_slashes=False)
 def index():
-    """Returns Hello HBNH!"""
+    """returns Hello HBNB!"""
     return 'Hello HBNB!'
 
 if __name__ == '__main__':
